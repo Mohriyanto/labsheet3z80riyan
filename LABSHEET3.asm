@@ -1,0 +1,17 @@
+	LD B,10H
+	LD C,08H
+	XOR A
+	LD IX,(1324)
+	LD IY,(2415)
+	SBC A,(IX-04H)
+	LD A,(IY+05H)
+	LD A,B
+	LD A,C
+	LD A, (IX+00H)
+	ADC A,(IX+04H)
+	ADD A,(IY+05H)
+	LD H,01H
+	LD (1850),HL
+	LD (1853),HL
+	HALT
+	.END
